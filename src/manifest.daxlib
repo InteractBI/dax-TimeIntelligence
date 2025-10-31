@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/daxlib/daxlib/refs/heads/main/schemas/manifest/1.0.0/manifest.1.0.0.schema.json",
-  "id": "InteractBI.TimeIntelligence.SPLY",
+  "id": "InteractBI.TimeIntelligence",
   "version": "0.1.0",
   "authors": "Interact BI",
   "description": "A custom DAX function allowing filter-clear behaviours on SAMEPERIODLASTYEAR and the ability to safely disparate calendars or non-time related filters.",
