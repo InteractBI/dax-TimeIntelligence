@@ -1,13 +1,18 @@
-/// A custom DAX function allowing filter-clear behaviours on SAMEPERIODLASTYEAR, providing the ability to safely combine the results from disparate calendars and non-time related filters.
+/// Performs a modified SAMEPERIODLASTYEAR shift referencing a custom calendar, clearing filters on unrelated columns and respecting any complete periods selected
+///
+/// metricExpr - The calculation to perform.
+///
+/// calendarTable - The calendar table of the model.
+///
+/// calendarDateColumn - The date column of the model's calendar table. Must be from the the same as calendarTable.
+///
+/// customCalendar - The custom calendar to use. Must be a member of calendarTable.
+///
+/// fiscalPeriodColumn - The Time Unit column from the custom calendar to consider as the point of comparison to go back one year on a per period basis (Year, Semester, Quarter, Month, or Week).
+///
+/// fiscalPeriodDayCountColumn - A "Day of" Time Unit column. It does not need to be the same period type as fiscalPeriodColumn.
 function 'InteractBI.TimeIntelligence.SPLY' = ```
-		/// Performs a modified SAMEPERIODLASTYEAR shift referencing a custom calendar, clearing filters on unrelated columns and respecting any complete periods selected
-		/// @param metricExpr - The calculation to perform
-		/// @param calendarTable - The calendar table of the model
-		/// @param calendarDateColumn - The date column of the model's calendar table. Must be from the the same as calendarTable
-		/// @param customCalendar - The custom calendar to use. Must be a member of calendarTable
-		/// @param fiscalPeriodColumn - The Time Unit column from the custom calendar to consider as the point of comparison to go back one year on a per period basis (Year, Semester, Quarter, Month, or Week)
-		/// @param fiscalPeriodDayCountColumn - A "Day of" Time Unit column. It does not need to be the same period type as fiscalPeriodColumn.
-		/// @returns The metric result after the SAMEPERIODLASTYEAR shift
+
 		( 
 			metricExpr : ANYREF EXPR,
 			calendarTable : ANYREF,
@@ -152,3 +157,4 @@ function 'InteractBI.TimeIntelligence.SPLY' = ```
 		annotation DAXLIB_PackageId = InteractBI.TimeIntelligence
 
 		annotation DAXLIB_PackageVersion = 0.1.0
+
