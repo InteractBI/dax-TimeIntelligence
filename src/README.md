@@ -1,6 +1,6 @@
 # InteractBI.TimeIntelligence
 
-For more information about how this works to solve blanks and errors, see [https://interact.bi](https://interact.bi/2025/10/solving-sameperiodlastyear-blanks-and-errors/)
+For more information about how this works to solve blanks and errors, see [interact.bi: Solving SAMEPERIODLASTYEAR blanks and errors](https://interact.bi/2025/10/solving-sameperiodlastyear-blanks-and-errors/)
 
 ## Usage
 
