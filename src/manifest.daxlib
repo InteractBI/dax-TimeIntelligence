@@ -3,7 +3,7 @@
   "id": "InteractBI.TimeIntelligence",
   "version": "0.1.0",
   "authors": "Interact BI",
-  "description": "A custom DAX function allowing filter-clear behaviours on SAMEPERIODLASTYEAR, providing the ability to safely combine the results from disparate calendars and non-time related filters.",
+  "description": "Extends the features of Power BI DAX Time Intelligence functions",
   "tags": "SAMEPERIODLASTYEAR,custom calendar,time intelligence,fiscal calendar",
   "projectUrl": "https://interact.bi/",
   "repositoryUrl": "https://github.com/InteractBI/dax-TimeIntelligence/",
