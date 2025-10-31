@@ -1,13 +1,20 @@
-# Contoso.Sample
+# InteractBI.TimeIntelligence
 
-This is a sample DAX library for demonstration purposes only.
+For more information about how this works to solve blanks and errors, see [https://interact.bi](https://interact.bi/2025/10/solving-sameperiodlastyear-blanks-and-errors/)
 
 ## Usage
 
 ```dax
 EVALUATE
 {
-    Contoso.Sample.MyFunc1()
+    InteractBI.TimeIntelligence.SPLY (
+        [Measure], //or calculation
+        'Calendar Table', //the model's calendar table
+        'Calendar Table'[Date], // a list of dates
+        'Custom Calendar', // the custom calendar to use
+        'Calendar Table'[Fiscal Year Period], // or any other column you wish to be a "period true" comparison
+        'Calendar Table'[Fiscal Year Period Day Number] // in the event the filter context results in a part period selection, the "Day of X" you wish to use to shift your result back a year.
+    )
 }
 ```
 
